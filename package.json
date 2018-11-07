@@ -1,0 +1,27 @@
+{
+  "name": "monsters-practice-challenge-london-web-091718",
+  "version": "1.0.0",
+  "description": "For this practice code challenge, your objective is to build a frontend for our monsters data. Currently the index.html page has a script tag to ```demo.js``` so that you can see a demo of the finished app. Comment out the script tag to ```demo.js``` and uncomment out the script tag to ```index.js``` where you will code your solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akmalkhadir/monsters-practice-challenge-london-web-091718.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akmalkhadir/monsters-practice-challenge-london-web-091718/issues"
+  },
+  "homepage": "https://github.com/akmalkhadir/monsters-practice-challenge-london-web-091718#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
