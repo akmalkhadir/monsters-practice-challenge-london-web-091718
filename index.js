@@ -64,7 +64,7 @@ const renderAddMonsterForm = () => {
   <input id="name" placeholder="name...">
   <input id="age" placeholder="age...">
   <input id="description" placeholder="description...">
-  <button>Create</button>
+  <button>Create Monster</button>
   `
   monsterForm.appendChild(form)
 }
