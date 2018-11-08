@@ -1,6 +1,8 @@
 const monsterEl = document.querySelector('#monster-container')
+const monsterForm = document.querySelector('#create-monster')
 const forwardBtn = document.querySelector('#forward')
 const backBtn = document.querySelector('#back')
+
 let localMonsters
 let currentPage = 1
 
@@ -33,7 +35,11 @@ const getMonstersByPage = (page) => {
     .then(monsters => {
       localMonsters = [...monsters]
       monsterEl.innerHTML = ``
-      renderMonsters(localMonsters)
+      if (localMonsters.length > 0) {
+        renderMonsters(localMonsters)
+      } else {
+        monsterEl.innerHTML = `No more monster yo!`
+      }
     })
 }
 
@@ -50,3 +56,27 @@ backBtn.addEventListener('click', (event) => {
 })
 
 getMonstersByPage(currentPage)
+
+const renderAddMonsterForm = () => {
+  const form = document.createElement('form')
+  form.id = 'monster-form'
+  form.innerHTML = `
+  <input id="name" placeholder="name...">
+  <input id="age" placeholder="age...">
+  <input id="description" placeholder="description...">
+  <button>Create</button>
+  `
+  monsterForm.appendChild(form)
+}
+
+renderAddMonsterForm()
+
+monsterForm.addEventListener('submit', event => {
+  event.preventDefault()
+  const newMonster = {}
+  let monsterFormInputs = monsterForm.querySelectorAll('input')
+  newMonster.name = monsterFormInputs[0].value
+  newMonster.age = monsterFormInputs[1].value
+  newMonster.description = monsterFormInputs[2].value
+  createMonster(newMonster)
+})
